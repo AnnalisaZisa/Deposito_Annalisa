@@ -1,5 +1,4 @@
-Deposito per il corso di 
-# Python
+Deposito per il corso di Python
 
 Sono Annalisa e questo è il mio deposito per l'Academy di 
 # Acus 
