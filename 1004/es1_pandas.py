@@ -3,8 +3,8 @@ import numpy as np
 
 names_arr = np.array(['Marco', 'Giulia', 'Francesco', 'Simone', 'Carla', 'Vittoria', 'Cesare'])
 cities_arr = np.array(['Milano', 'Pavia', 'Torino', 'Roma', 'Palermo'])
-age = np.linspace(0, 30, 5)
-salary = np.linspace(0, 2000, 5)
+age = np.linspace(0, 30, 6)
+salary = np.linspace(0, 2000, 6)
 
 
 names = []
