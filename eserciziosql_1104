@@ -1,0 +1,24 @@
+SELECT * FROM Auto;  -- visualizzo l'intera tabella Auto
+
+INSERT INTO Auto(marca, modello, anno, prezzo) --aggiungo 5 auto
+VALUES ('Fiat', 'Panda', 1980, 3000),
+('Toyota', 'Yaris', 2009, 8000),
+('Nissan', 'Micra', 2018, 12000),
+('Jeep', 'Renegade', 2019, 20000),
+('Fiat', 'Punto', 2010, 5000);
+
+SELECT * from Auto -- seleziono le auto con prezzo superiore a 10000
+where prezzo > 10000; 
+
+SELECT * from Auto -- ordino le auto per anno in ordine decrescente
+ORDER BY anno DESC; 
+
+UPDATE Auto  -- modifico il prezzo delle auto Fiat amentando il valore del 10%
+SET prezzo = prezzo * 1.10
+WHERE marca = 'Fiat';
+
+DELETE FROM Auto -- tolgo dalla tabella le auto con prezzo < 5000
+WHERE prezzo < 5000;
+
+
+
