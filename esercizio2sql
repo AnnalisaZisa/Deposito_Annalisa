@@ -1,0 +1,44 @@
+-- 1. Visualizza l'elenco completo dei prodotti con il nome del fornitore accanto.
+
+SELECT Prodotti.NOME, Fornitori.paese
+FROM Prodotti
+INNER JOIN Fornitori
+ON Prodotti.fornitore_id = Fornitori.id;  
+
+-- 2. Seleziona tutti i prodotti che costano più di 300€, mostrando anche la nazione del fornitore.
+
+SELECT Prodotti.nome, prezzo, Fornitori.paese FROM Prodotti
+INNER JOIN Fornitori 
+ON Prodotti.fornitore_id = Fornitori.id
+WHERE prezzo > 300;
+
+
+-- 3. Conta quanti prodotti ci sono per ogni fornitore.
+
+SELECT prodotti.fornitore_id, COUNT(prodotti.id)
+FROM Fornitori
+LEFT JOIN Prodotti ON Prodotti.fornitore_id = Fornitori.id
+GROUP BY Fornitori.nome
+ORDER BY Prodotti.fornitore_id;
+
+-- 4. Ordina i prodotti per prezzo decrescente.
+
+SELECT * from Prodotti
+ORDER BY prezzo DESC; 
+
+-- 5. Trova tutti i prodotti forniti da fornitori italiani.
+
+SELECT * FROM Prodotti 
+INNER JOIN Fornitori 
+ON Prodotti.fornitore_id = Fornitori.id
+WHERE Fornitori.paese = 'Italia';
+
+-- 6. Visualizza solo i prodotti appartenenti alla categoria "Informatica" con relativo nome e prezzo.
+
+SELECT Prodotti.nome, prodotti.categoria, prodotti.prezzo from Prodotti
+where categoria = 'Informatica';
+
+-- 7.Calcola il prezzo medio dei prodotti forniti da "TechGlobal".
+SELECT avg(prezzo) AS MediaPrezzi
+FROM Prodotti
+
